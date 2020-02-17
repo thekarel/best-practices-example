@@ -1,0 +1,12 @@
+{
+  "name": "muffin",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": [
+    "modules/*"
+  ],
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  }
+}
