@@ -1,3 +1,5 @@
+import {OrderRepositoryMemory} from '@cupcake/repository'
+import {OrderRepository} from '../src'
 import {EmailNotification} from '../src/EmailNotification'
 import {createOrderPayloadFixture} from '../src/order/createOrderPayloadFixture'
 import {OrderService} from '../src/order/OrderService'
@@ -5,11 +7,13 @@ import {EmailNotificationMock} from './EmailNotificationMock'
 
 let orderService: OrderService
 let emailNotification: EmailNotification
+let orderRepository: OrderRepository
 
 describe(`Create Order`, () => {
   beforeEach(() => {
     emailNotification = new EmailNotificationMock()
-    orderService = new OrderService(emailNotification)
+    orderRepository = new OrderRepositoryMemory()
+    orderService = new OrderService(emailNotification, orderRepository)
   })
 
   describe(`Validate Order`, () => {
@@ -22,15 +26,21 @@ describe(`Create Order`, () => {
     })
   })
 
-  describe(`Notification`, () => {
-    it(`sends email notification`, async () => {
-      jest.spyOn(emailNotification, 'sendOrderNotification')
+  it(`sends email notification`, async () => {
+    jest.spyOn(emailNotification, 'sendOrderNotification')
+    const payload = createOrderPayloadFixture.build()
 
-      const payload = createOrderPayloadFixture.build()
+    const order = await orderService.create(payload)
 
-      const order = await orderService.create(payload)
+    expect(emailNotification.sendOrderNotification).toHaveBeenCalledWith(order)
+  })
 
-      expect(emailNotification.sendOrderNotification).toHaveBeenCalledWith(order)
-    })
+  it(`saves order`, async () => {
+    jest.spyOn(orderRepository, 'save')
+    const payload = createOrderPayloadFixture.build()
+
+    const order = await orderService.create(payload)
+
+    expect(orderRepository.save).toHaveBeenCalledWith(order)
   })
 })

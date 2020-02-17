@@ -1,0 +1,10 @@
+{
+  "name": "@cupcake/repository",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "src/index.ts",
+  "dependencies": {
+    "@cupcake/services": "1.0.0"
+  }
+}

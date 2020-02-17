@@ -6,6 +6,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@cupcake/domain": "1.0.0",
+    "@cupcake/repository": "1.0.0",
     "nanoid": "^2.1.11",
     "ts-custom-error": "^3.1.1"
   },
