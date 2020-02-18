@@ -1,0 +1,12 @@
+schema: http://localhost:8888/
+generates:
+  src/graphQLTypes.ts:
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
+    plugins:
+      - typescript
+      - typescript-operations
+config:
+  namingConvention:
+    enumValues: keep

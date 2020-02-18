@@ -8,7 +8,7 @@ import {Order} from './Order'
 export class OrderResolver {
   constructor(private readonly orderService: OrderService) {}
 
-  @Query(() => [Order], {nullable: 'items'})
+  @Query(() => [Order])
   async orders(): Promise<DomainOrder[]> {
     return this.orderService.all()
   }

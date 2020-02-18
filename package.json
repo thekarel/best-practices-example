@@ -10,6 +10,8 @@
     "domain": "yarn workspace @cupcake/services",
     "services": "yarn workspace @cupcake/services",
     "graph": "yarn workspace @cupcake/graph",
+    "ui": "yarn workspace @cupcake/ui",
+    "dev": "concurrently -n 'UI,GRAPH' 'graphUrl=\"http://localhost:8888\" yarn ui dev' 'yarn graph dev'",
     "validate": "yarn lint:pretty && yarn lint:tsc && yarn test",
     "lint:pretty": "prettier -c 'modules/**/*.{ts,tsx}'",
     "lint:tsc": "tsc --noEmit --noUnusedParameters --noUnusedLocals",
@@ -17,6 +19,7 @@
   },
   "devDependencies": {
     "@types/jest": "^25.1.2",
+    "concurrently": "^5.1.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "ts-jest": "^25.2.0",
