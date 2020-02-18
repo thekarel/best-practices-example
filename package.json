@@ -6,6 +6,9 @@
   "workspaces": [
     "modules/*"
   ],
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "domain": "yarn workspace @cupcake/services",
     "services": "yarn workspace @cupcake/services",
