@@ -1,9 +1,9 @@
 import {OrderRepositoryMemory} from '@cupcake/repository'
+import {EmailNotificationMock} from '@cupcake/notification'
 import {OrderRepository} from '../src'
 import {EmailNotification} from '../src/EmailNotification'
 import {createOrderPayloadFixture} from '../src/order/createOrderPayloadFixture'
 import {OrderService} from '../src/order/OrderService'
-import {EmailNotificationMock} from './EmailNotificationMock'
 
 let orderService: OrderService
 let emailNotification: EmailNotification

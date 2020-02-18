@@ -1,3 +1,5 @@
 export * from './cupcake/Cupcake'
+export * from './cupcake/Feature'
+export * from './cupcake/Kind'
 export * from './cupcake/cupcakeFixture'
 export * from './order/Order'

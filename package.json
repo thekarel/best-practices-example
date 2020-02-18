@@ -9,6 +9,7 @@
   "scripts": {
     "domain": "yarn workspace @cupcake/services",
     "services": "yarn workspace @cupcake/services",
+    "graph": "yarn workspace @cupcake/graph",
     "validate": "yarn lint:pretty && yarn lint:tsc && yarn test",
     "lint:pretty": "prettier -c 'modules/**/*.{ts,tsx}'",
     "lint:tsc": "tsc --noEmit --noUnusedParameters --noUnusedLocals",

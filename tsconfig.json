@@ -7,5 +7,10 @@
     "outDir": "lib",
     "resolveJsonModule": true,
     "strict": true,
-  }
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2020"
+  },
+  "exclude": ["node_modules"]
 }

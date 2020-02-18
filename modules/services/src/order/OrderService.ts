@@ -31,4 +31,12 @@ export class OrderService {
 
     return order
   }
+
+  public async load(id: string): Promise<Order | undefined> {
+    return this.orderRepository.load(id)
+  }
+
+  public async all(): Promise<Order[]> {
+    return this.orderRepository.all()
+  }
 }

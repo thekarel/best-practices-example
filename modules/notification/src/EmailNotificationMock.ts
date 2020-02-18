@@ -1,4 +1,4 @@
-import {EmailNotification} from '../src/EmailNotification'
+import {EmailNotification} from '@cupcake/services'
 import {Order} from '@cupcake/domain'
 
 export class EmailNotificationMock implements EmailNotification {

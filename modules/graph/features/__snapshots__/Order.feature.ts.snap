@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Order Create returns new order 1`] = `
+Object {
+  "data": Object {
+    "createOrder": Object {
+      "customerName": "Mr. Muffin",
+      "deliveryAddress": "New York",
+      "id": Any<String>,
+      "items": Array [
+        Object {
+          "name": "One",
+        },
+        Object {
+          "name": "Two",
+        },
+        Object {
+          "name": "Three",
+        },
+      ],
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

@@ -1,0 +1,25 @@
+{
+  "name": "@cupcake/graph",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --ext ts --exec 'ts-node src/index.ts'"
+  },
+  "dependencies": {
+    "@cupcake/domain": "1.0.0",
+    "@cupcake/notification": "1.0.0",
+    "@cupcake/repository": "1.0.0",
+    "apollo-server": "^2.10.1",
+    "awilix": "^4.2.3",
+    "graphql": "^14.6.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^0.17.6"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.5.0",
+    "apollo-server-testing": "^2.10.1",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2"
+  }
+}

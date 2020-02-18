@@ -1,0 +1,7 @@
+{
+  "name": "@cupcake/notification",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "src/index.ts"
+}

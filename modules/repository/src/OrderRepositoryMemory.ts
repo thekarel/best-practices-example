@@ -11,4 +11,8 @@ export class OrderRepositoryMemory implements OrderRepository {
   async load(id: string) {
     return this.orders.get(id)
   }
+
+  async all() {
+    return Array.from(this.orders.values())
+  }
 }
