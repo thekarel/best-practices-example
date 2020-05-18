@@ -1,5 +1,5 @@
+import {Footer, Header} from 'grommet'
 import * as React from 'react'
-import {Header, Button, Box, Footer} from 'grommet'
 import styled from 'styled-components'
 
 const Wrap = styled.div`

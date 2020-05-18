@@ -9,7 +9,9 @@ export const getEnvConfigOrThrow = (): Config => {
     graphUrl: process.env.graphUrl as string,
   }
 
-  const missingConfig = mandatoryKeys.map((key) => typeof config[key] === 'undefined' ? key : null).filter((v) => v !== null))
+  const missingConfig = mandatoryKeys
+    .map((key) => (typeof config[key] === 'undefined' ? key : null))
+    .filter((v) => v !== null)
 
   if (missingConfig.length) {
     throw new Error(`Missing configuration in environment: ${missingConfig.join(', ')}`)

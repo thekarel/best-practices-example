@@ -1,6 +1,6 @@
+import {Box, Table, TableBody, TableCell, TableHeader, TableRow, Text} from 'grommet'
 import * as React from 'react'
 import {Order} from '../graphQLTypes'
-import {Box, Grommet, Table, TableBody, TableCell, TableFooter, TableHeader, TableRow, Text} from 'grommet'
 
 interface Props {
   orders: Order[]

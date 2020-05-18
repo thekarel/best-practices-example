@@ -8,7 +8,9 @@ import {Grommet} from 'grommet'
 import {theme} from './base/theme'
 import {Page} from './base/Page'
 
+//@ts-ignore
 if (module.hot) {
+  //@ts-ignore
   module.hot.accept()
 }
 
