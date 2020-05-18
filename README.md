@@ -14,6 +14,14 @@ yarn
 
 ## Development
 
+To start the UI and GraphQL server and store data in memory:
+
 ```
-yarn dev # start UI and GraphQL server
+yarn dev
+```
+
+To connect to a real MongoDB database:
+
+```
+MONGO_URL=mongodb://localhost:7017 yarn dev
 ```

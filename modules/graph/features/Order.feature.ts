@@ -8,7 +8,7 @@ let testClient: ApolloServerTestClient
 
 describe(`Order`, () => {
   beforeAll(async () => {
-    const server = getGraphqlServer(getInMemoryContainer())
+    const server = await getGraphqlServer(getInMemoryContainer())
     testClient = createTestClient(server)
   })
 

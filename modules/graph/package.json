@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@types/graphql": "^14.5.0",
+    "@types/mongodb": "^3.5.17",
     "apollo-server-testing": "^2.10.1",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2"

@@ -4,6 +4,10 @@ import {Order} from '@cupcake/domain'
 export class OrderRepositoryMemory implements OrderRepository {
   private orders: Map<string, Order> = new Map()
 
+  async connect() {
+    return
+  }
+
   async save(order: Order) {
     this.orders.set(order.id, order)
   }

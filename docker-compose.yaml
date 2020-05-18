@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: cupcake-mongo
+    hostname: cupcake-mongo
+    environment:
+      - MONGO_INITDB_DATABASE=cupcake
+    ports:
+      - 7017:7017
+    command: --port 7017
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: cupcake-mongo-express
+    hostname: cupcake-mongo-express
+    ports:
+      - 4400:8081
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=cupcake-mongo
+      - ME_CONFIG_MONGODB_PORT=7017
+    depends_on:
+      - mongo

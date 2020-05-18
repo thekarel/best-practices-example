@@ -5,6 +5,7 @@
   "private": true,
   "main": "src/index.ts",
   "dependencies": {
-    "@cupcake/services": "1.0.0"
+    "@cupcake/services": "1.0.0",
+    "mongodb": "^3.5.7"
   }
 }
