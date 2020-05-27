@@ -10,7 +10,7 @@
     "node": "12"
   },
   "scripts": {
-    "domain": "yarn workspace @cupcake/services",
+    "domain": "yarn workspace @cupcake/domain",
     "services": "yarn workspace @cupcake/services",
     "graph": "yarn workspace @cupcake/graph",
     "ui": "yarn workspace @cupcake/ui",
