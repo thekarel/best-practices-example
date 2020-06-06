@@ -10,7 +10,7 @@
     "@cupcake/domain": "1.0.0",
     "@cupcake/notification": "1.0.0",
     "@cupcake/repository": "1.0.0",
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.14.2",
     "awilix": "^4.2.3",
     "graphql": "^14.6.0",
     "reflect-metadata": "^0.1.13",
